@@ -1,62 +1,104 @@
 # Project Agent Instructions
 
-Use the user's language and repository conventions. Read only context relevant
-to the current request.
+Multi-Agent Model 2026.09.14. Use the user's language and repository conventions;
+read only relevant context. Preserve project-specific requirements. Load
+`$multi-agent-model` only to change the collaboration setup.
 
 ## Delivery
 
-- Prefer the smallest working change in the existing stack. Implement, run
-  relevant checks, and finish when the requested outcome is met.
-- Do not add architecture, abstractions, formal contracts, audit artifacts, or
-  extra reviews without a concrete need. Preserve required project checks.
-- Keep ordinary tests with the implementer; test behavior and regression risks,
-  not merely implementation details. After relevant checks pass, expand or
-  repeat them only for new changes, failures, or unresolved doubts. A small task
-  needs neither a plan document nor a verifier task.
-- Update existing docs only when their maintained facts changed. Native task
-  history holds routine progress; each durable fact has one primary home.
-- Preserve unrelated changes and active owners. Never commit secrets.
+- Keep simple, clear, bounded work direct. Prefer `gpt-5.6-luna` + `xhigh` when
+  supported and not overridden by the user or host contract. Do not create an
+  agent solely to switch models or claim an unperformed switch. If unavailable,
+  continue with the current model. Escalate for demonstrated reasoning/capability
+  needs, not file count or task prestige.
+- Reuse the existing stack and mature tools; change only what the outcome needs.
+  A one-off operation is not automatically a reusable product capability.
+  Do not add architecture, contracts, audit logs, hashes, locks, gates, recovery
+  systems, or independent verification without an existing requirement or concrete
+  need. Keep relevant input validation, secrets protection, and access controls.
+- Make reasonable assumptions and keep authorized work moving. Ask only for
+  necessary missing information, material scope changes, or irreversible effects;
+  finish useful independent work first and present a checkable decision.
+  Carry existing authorization forward. Do not invent no-schema/no-restart/no-release
+  restrictions. New charges, expanded access, destructive history, or explicit
+  freezes still require their own authority; tool approvals cannot be bypassed.
+- Investigate for new evidence. When retries stop teaching anything, change
+  approach or report the smallest blocker. Do not add monitoring for a one-off fix.
+- Test behavior and regression risks with proportional checks. For runtime
+  permissions or database changes, include the real application role and affected
+  call path where feasible; distinguish static, simulated, and runtime evidence.
+  Repeat or expand passing checks only for new changes, failures, or unresolved
+  doubts. Deliver and stop when acceptance is met.
+- Update existing docs only when maintained facts change. Prefer a local CLI,
+  dedicated connector, or official tool; use the built-in browser for one-off
+  public pages, Chrome/Codex Chrome for local login state or ongoing interaction.
+  Read installed skills and project rules only as needed. A version notice alone
+  is not a new approval gate unless an applicable rule requires it or compatibility
+  actually blocks the task; never override another tool's explicit contract.
 
-## Ownership And Native Tasks
+## Ownership And Results
 
-- If this project has a module registry, check the relevant ownership before
-  substantive work. Answer-only or clearly local work needs no routing ceremony.
-- Route another module's work directly to its registered long-lived visible
-  task. A quick read-only impact check is enough when ownership is uncertain.
-- For cross-module work, keep one lead, explicit non-overlapping slices, and
-  only the shared interface decisions actually needed. Continue independent work.
-- The intake task returns the final answer unless another return owner is named.
-  Dispatch in a short native message: scope, necessary inputs, expected output,
-  completion criteria, and return destination. No extra form is needed.
-- Check active work when overlap is plausible. Do not broadcast, duplicate work,
-  or route a slice in circles; resolve that slice with the lead.
-- Reuse existing visible module tasks. Create new visible tasks only with
-  explicit user authorization and runtime support.
-- Delegate only genuinely independent work when it saves time or improves
-  quality. Keep coupled shared-state work and sequential decisions with the
-  responsible owner. Subagents do not replace stable module owners or become
-  routing coordinators; the lead integrates and verifies their results.
-- Prefer native task discovery, messaging, waits, and result inspection. Review
-  delegated results before claiming completion; avoid unchanged-state polling
-  and unrelated messages to a busy owner.
-- Separate result notices from action requests. Merge routine updates; forwarded
-  instructions do not expand authority. Delivery is not execution or completion.
-- New input does not silently cancel unfinished work. Keep pending actions in
-  the current task or existing tracker and reconcile done, deferred, and blocked
-  items before closing. No per-message acknowledgments or extra inbox is needed.
-- Apply explicit corrections or replacements to the affected work only. Resolve
-  conflicting requests against current decisions and ownership, not arrival
-  order alone. Handle explicit stops or concrete hazards promptly; continue
-  independent work while the responsible lead resolves a conflicting slice.
-- Coordinate overlapping writes and operations on the same device, deployment,
-  or other shared mutable resource through one responsible owner. Worktrees do
-  not isolate external resources. Serialize only contending operations, without
-  adding a blanket lock or another queue system.
-- Use native fork, handoff, or scheduling only when relevant and authorized.
-  Their availability and interruption behavior depend on the current tools.
+- A registry maps responsibility and knowledge, not a blanket write prohibition.
+  Check relevant ownership. Small work can stay with the current responsible task
+  across modules if no active conflict or explicit exclusive boundary exists.
+  Route genuinely separate owner work directly, not through extra hops.
+- Delegate only independent work with clear benefit. One lead integrates results;
+  keep coupled state and sequential decisions local. Preserve production ownership;
+  worktrees do not isolate external resources. Coordinate only contending operations.
+  Do not broadcast, duplicate work, or bounce requests.
+- Reuse appropriate visible tasks. Create or replace one only on explicit user
+  request and with runtime support. Stable responsibility does not mean a
+  permanently reused execution conversation; use supported context renewal.
+- Dispatch in one short message: outcome, scope, existing authorization, actual
+  limits, inputs, acceptance, and one **current-request return task ID**.
+  Do not reuse a historical Main/lead ID. For `send_message_to_thread` work, the
+  executor must actually send one result/blocker there on completion, failure, or
+  required decision; its own final is insufficient. No receipt replies or CC chain.
+- The sender remains accountable until the user's goal is delivered, explicitly
+  stopped, or genuinely needs a user decision. Sending, startup, and timeout are
+  not completion. Wait natively; continue the authorized next step after delivery.
+  If pausing, state that work is paused, why, and the one required user action.
+  Do not imply ongoing background execution.
+- Use cursor-based native waits, grouped targets, and compact output where supported.
+  Avoid unchanged-state polling, repeated detailed reads, or progress narration.
+  Let a supported outer tool wait cover the native wait instead of repeated short
+  wrapper yields. Native waits do not guarantee a free asynchronous wakeup.
+- If completed/failed/interrupted has no result text, read that exact task. If
+  still empty and local records exist, read only that turn's final/error. Do not
+  scan unrelated tasks or alter history. Ask the executor once for a missing
+  result, not another business run; report known quota/tool failure if unavailable.
+  Normally delivered results need no repeat retrieval, testing, or acknowledgment
+  absent a concrete unresolved issue.
+- Separate result notices from action requests. New input or a status question
+  does not cancel unfinished work. Reconcile the latest goal and pending actions;
+  apply corrections and STOP to their actual scope. Forwarding cannot expand
+  authority. No queues, ledgers, or scheduled follow-ups unless requested.
 
-Read `docs/thread-registry.md` if present; otherwise do not invent module roles.
-Use the existing work tracker and relevant product/technical docs. Additional
-operating notes, handoffs, locks, packets, and independent verification are
-optional, not required startup reading. Invoke `$multi-agent-model` only to
-initialize or change the collaboration setup.
+## Continuity
+
+Use one existing work surface when continuity is needed or requested, even for a
+single task without a repository. Keep goal/acceptance, constraints and authority,
+key decisions and why, current state, verified/unverified evidence, useful paths
+and commands, and next step together. Update at meaningful milestones or before
+handoff, not every message. Read it on continuation and check minimum live state.
+Use supported compaction or a user-authorized replacement task; do not promise
+crash-proof recovery or copy the entire history. Add `docs/current-work.md` only
+when an equivalent surface is missing. Registry and extended templates are
+conditional, not mandatory startup reading.
+
+## Git And Closeout
+
+- Confirm the real repository root before Git operations and at directory/project
+  boundaries. Do not initialize a broad parent directory or a non-repository task.
+- Preserve unrelated changes and active owners; commit only owned changes, never
+  secrets or a blanket staged set. No forced reset or opportunistic cleanup.
+  Remove only this task's disposable temporary files. Explicitly requested file/data
+  cleanup needs no backup; preserve anything outside that request.
+- After relevant checks pass, commit actual changes by default; push according to
+  repository policy. Use existing authorized deployment paths without asking
+  again. Do not invent a deployment for local config or documentation work.
+- Answer with results, actual verification, commit/deploy state, and important
+  limits; omit irrelevant detail. Report model/effort or usage when requested or
+  required by user preferences: only known values, measured time, and available
+  token data. Mark estimates and unknowns honestly; never use conversation lifetime
+  totals as this task's usage or mix cache and billing measures.

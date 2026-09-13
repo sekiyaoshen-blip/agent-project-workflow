@@ -1,6 +1,6 @@
 # Codex Native Capability Notes
 
-Reviewed 2026-09-05. Maintainer context only, not runtime startup instructions.
+Reviewed 2026-09-14. Maintainer context only, not runtime startup instructions.
 Feature availability varies by client, account, rollout, and callable tools.
 
 ## What Changed
@@ -28,7 +28,10 @@ The [GPT-6 Astra guidance](https://developers.openai.com/api/docs/guides/latest-
 notes sensitivity to skills/instructions, early stopping, under-delegation in
 some settings, and excessive testing. Our response is shorter instructions,
 clear outcomes, useful independent delegation, and a concrete stopping rule.
-This does not select a model or add per-model behavior branches.
+Version 2026.09.14 adds the user's lightweight preference for simple bounded work:
+[gpt-5.6-luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) with xhigh.
+Use actual host-supported selection and honor explicit user/tool constraints; do
+not add provider routing or spawn an agent merely to select a model.
 
 API asynchronous-tool and mid-turn steering features require harness support;
 they are not evidence that a desktop task has those exact API capabilities.

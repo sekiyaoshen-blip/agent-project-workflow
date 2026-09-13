@@ -2,7 +2,8 @@
 
 Keep this skill focused on initializing or simplifying project collaboration.
 Preserve durable module ownership, direct routing, one cross-module lead, and
-native-first execution. Do not reintroduce model routing or mandatory ceremony.
+native-first execution. Simple bounded work prefers Luna + xhigh where supported;
+do not add a provider router, model-only delegation, or mandatory routing ceremony.
 
 Before adding a rule or template, identify the concrete failure it prevents and
 why existing native tools or project instructions are insufficient. Keep

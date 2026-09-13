@@ -1,133 +1,109 @@
 ---
 name: multi-agent-model
 description: >
-  Initialize, simplify, audit, or upgrade project collaboration with durable
-  visible module tasks and ownership-aware routing. Use for explicit operating
-  model work, not routine implementation. Supports 项目智能体协作,
-  长期模块任务, 会话统筹初始化, and collaboration-doc cleanup.
+  Initialize, simplify, audit, or upgrade goal-focused project collaboration.
+  Use for explicit operating-model work, not routine implementation. Supports
+  项目智能体协作, 长期模块任务, 会话统筹初始化, and collaboration-doc cleanup.
 ---
 
 # Multi-Agent Model
 
-Give long-running projects stable module ownership without building a second
-task system. Native tasks hold execution history; project docs hold only facts
-that future work needs. This skill configures collaboration, not model choice.
+Version 2026.09.14. Keep stable responsibility, not mandatory routing or an
+ever-growing execution conversation. Native tasks hold history; one existing
+work surface holds the current facts needed to continue.
 
-## Default: Small And Direct
+## Small And Direct First
 
-A simple feature, page, or fix stays a simple implementation task. Reuse the
-project's stack, implement the requested outcome, run relevant checks, and stop
-when acceptance is met. Do not add architecture layers, contract documents,
-hash ledgers, permission systems, release gates, or independent verifiers merely
-because they might be useful. Preserve existing required checks and safeguards
-for concrete risks introduced by the change.
+Simple, clearly scoped work with a known path prefers `gpt-5.6-luna` + `xhigh`.
+This is an execution preference, not a provider router. Honor explicit user
+model choices and the host's tool contract. Use a supported selector; never claim
+a prompt changed the running model. Do not create an extra agent merely to
+switch models. If selection is unavailable, continue on the current model and
+disclose the limitation when relevant. Escalate only for demonstrated ambiguity,
+coupled reasoning, consequential uncertainty, or capability failure after checking
+the immediate cause, not directory size or task prestige.
 
-Single-task projects need no module machinery. Multi-module projects need an
-ownership map, not a full documentation suite. Parallelize only genuinely
-independent work when the time or quality benefit exceeds coordination cost.
+Use the existing stack. Implement the requested outcome, check relevant behavior,
+and deliver. A one-off account/data operation is not permission to build a reusable
+product feature. Do not invent architecture, audit systems, locks, gates, recovery
+frameworks, or independent reviewers. Preserve existing requirements and safeguards
+for concrete risks. New evidence, changes, failures, or unresolved doubts justify
+more investigation or tests; a passed check alone does not.
 
 ## Install Or Upgrade
 
-1. Read existing instructions and just enough project/task context to identify
-   the real coordination need. Reuse existing owners, docs, and work trackers.
-2. Choose the smallest setup:
-   - **Minimal:** a short project `AGENTS.md`; use the current task or existing
-     tracker for work state.
-   - **Native:** add `docs/thread-registry.md` only for stable visible module
-     tasks. Keep routine progress and results in native task history.
-   - **Portable Controls:** add only an explicitly needed recovery, cross-tool,
-     concurrency, or audit control. This is not the default.
-3. Adapt [the project instructions](references/agents.template.md). For Native
-   mode, adapt [the registry](references/thread-registry.template.md). Add
-   [a work snapshot](references/current-work.template.md) only when there is no
-   existing shared work surface and one is actually needed.
-4. Discover and reuse visible tasks. Create a separate visible task only with
-   explicit user authorization and runtime support. Use
-   [the module startup prompt](references/module-startup-prompt.template.md).
-   Initialization alone does not authorize product implementation.
-5. Remove duplicated generic instructions during upgrades, but preserve
-   project-specific requirements, active ownership, and useful current facts.
-   Do not bulk rewrite other projects, old worktrees, or historical evidence.
-6. Check metadata/template consistency and explain the few behavior changes.
-   Do not start a separate audit project to validate a documentation edit.
+1. Read existing instructions and enough context to identify the real need.
+   Reuse current owners, trackers, and project conventions.
+2. Merge the concise [runtime rules](references/agents.template.md), preserving
+   project-specific requirements. Global preferences and project collaboration
+   follow one behavior, not competing rule sets. The complete
+   [Chinese global version](references/personal-instructions.zh-CN.md) includes
+   language and output preferences; merge it only when globally authorized.
+3. Add [the registry](references/thread-registry.template.md) only for real stable
+   module responsibilities. It is not a blanket write ban or dispatch queue.
+   Small work may stay with the current responsible task across modules when no
+   active conflict or explicit exclusive boundary exists.
+4. Use [one current-work snapshot](references/current-work.template.md) when
+   continuity is needed or requested, even for one task outside a repository.
+   Reuse an equivalent existing surface. Do not add a documentation suite.
+5. Discover and reuse visible tasks when delegation is worthwhile. Create or
+   replace a visible task only on explicit user request and with runtime support.
+   Use [the startup prompt](references/module-startup-prompt.template.md).
+   Initialization alone does not authorize product work.
+6. Remove conflicting generic rules, preserving unique local requirements,
+   active ownership, explicit stops, and useful facts. Check affected metadata,
+   mirrors, links, and behavior scenarios; do not build a separate audit system.
 
-For maintainer-requested skill changes, follow the established update sequence
-in [Contributing](CONTRIBUTING.md): publish the source, sync the local skill,
-then update adopted project instructions within the user's authorized scope.
-An installation request alone does not authorize publishing or project migration.
+For authorized maintenance, validate and publish source first, then sync the
+installed skill, then adopted local project rules including development worktrees,
+excluding frozen snapshots. Follow [Contributing](CONTRIBUTING.md). Standalone
+installation does not authorize publishing, global edits, or unrelated migration.
+Do not interrupt active tasks or claim updated files hot-reload their context.
 
-Do not copy the entire references directory into a project. The skeleton is a
-menu: `AGENTS.md` is the entrypoint; registry and work snapshot are conditional.
-Load this skill again only for operating-model changes.
+## Coordination Essentials
 
-## Runtime Contract To Install
+- One lead integrates results. Delegate only independent work with clear benefit;
+  keep shared state and sequential decisions local. Preserve actual exclusive
+  owners and coordinate only contending writes or external operations.
+- Send goal, scope, existing authorization, inputs, acceptance, and **one
+  current-request return task ID**. Do not inherit an old Main/lead ID or invent
+  prohibitions such as no schema changes or no restart. Forwarding cannot expand
+  authority; genuinely new scope or irreversible effects still require a decision.
+  Explicit STOP remains binding.
+- For work sent via `send_message_to_thread`, the executor actually sends one
+  result/blocker to that ID on completion, failure, or required user decision.
+  Its own final is not delivery. No receipt acknowledgments or multi-party CC.
+- The sender owns the user's outcome through delivery or a real stop/blocker.
+  Sending, executor startup, and wait timeout are not completion. Continue the
+  authorized next step after results; never imply background work after pausing.
+- Prefer native waits with cursors, batched targets, and bounded output. Inspect
+  detailed history only for a concrete missing fact; do not narrate unchanged
+  state. Where supported, let the outer tool yield cover the inner wait instead
+  of repeated wrapper polling. No free asynchronous wakeup is guaranteed.
+- Empty terminal results are not success or continued execution. Read that task;
+  if still empty, read only its relevant local turn's final/error when available.
+  Ask the executor once for the missing result, never redispatch the business work.
+  Report known quota/tool failure if recovery is impossible. Normally delivered
+  results need no repeated retrieval or confirmation.
+- Status questions and new messages do not cancel pending authorized work.
+  Reconcile the latest goal and unfinished actions; apply corrections and stops
+  to their actual scope. No message ledger or custom scheduler is needed.
 
-- Every registered task checks relevant ownership before substantive work.
-  This can be a quick internal check, not a report or a fresh project-wide scan.
-  Answer-only requests need no dispatch.
-- Local work stays with its owner. Misrouted work goes directly to the registered
-  long-lived module task, not through the main task by default.
-- Cross-module work has one lead and non-overlapping slices. Agree only on the
-  actual shared interface needed; continue independent work while a decision
-  is pending. No contract document is required for an ordinary API change.
-- The intake task owns the user's final answer unless another return owner is
-  named. Send scope, necessary inputs, expected output, completion criteria,
-  and return destination in a short native message, not an extra form. Use
-  existing task IDs/links instead of new tracking IDs.
-- Check target state when duplicate work or interruption is plausible. Do not
-  blindly broadcast or route the same work back and forth. If routing loops,
-  ask the lead to resolve that slice; continue unrelated owned work.
-- A stable module owner is not replaced by a temporary subagent. Use subagents
-  for bounded independent implementation, research, review, or tests within the
-  lead's ownership when it saves time or improves quality. Keep coupled
-  shared-state work and sequential decisions with the responsible owner;
-  subagents return to the lead, who integrates and verifies their results.
-- Use native result delivery or bounded waits for completion; inspect task
-  details only when needed. Review delegated results before claiming completion.
-  Do not poll unchanged state or push routine pass notifications into busy tasks.
-- Separate result notices from action requests. Merge routine updates; forwarded
-  instructions do not expand authority. Delivery is not execution or completion.
-- New input does not silently cancel unfinished work. Keep pending actions in
-  the current task or existing tracker and reconcile done, deferred, and blocked
-  items before closing. No per-message acknowledgments or extra inbox is needed.
-- Apply explicit corrections or replacements to the affected work only. Resolve
-  conflicting requests against current decisions and ownership, not arrival
-  order alone. Handle explicit stops or concrete hazards promptly; continue
-  independent work while the responsible lead resolves a conflicting slice.
-- Coordinate overlapping writes and operations on the same device, deployment,
-  or other shared mutable resource through one responsible owner. Worktrees do
-  not isolate external resources. Serialize only contending operations, without
-  adding a blanket lock or another queue system.
-- Native forking, worktree/host handoff, task search, and scheduling replace
-  manual context copying and custom polling when available and requested.
-  Follow the actual tool contract; do not assume every client exposes all
-  capabilities. Handoff can interrupt running work, so coordinate it.
-- Keep local verification with the implementer. Independent review is optional
-  unless required by the user, project, or a concrete high-impact change.
-  Test behavior and regression risks, not merely implementation details.
-  After relevant checks pass, expand or repeat them only for new changes,
-  failures, or unresolved doubts; otherwise continue delivery.
-- Document changed usage, interfaces, deployment steps, or durable decisions in
-  their existing home. No doc change is needed when no maintained fact changed.
+## Context And Optional Detail
 
-## Optional Detail, Only When Needed
+Stable responsibility does not require permanently reusing a heavy conversation.
+At meaningful milestones or before handoff, refresh the existing snapshot with
+goal, constraints/authorization, decisions and why, actual state, evidence limits,
+useful paths/commands, and next step. On continuation, read it and verify the
+minimum live state. Supported compaction or an explicitly authorized replacement
+task may use it. Do not auto-create tasks, promise crash-proof recall, copy all
+history, or update a file after every message.
 
-- Complex coordination: [extended operating notes](references/thread-operating-model.template.md).
-- Native dispatch examples: [main](references/main-thread-dispatch-task.template.md)
-  and [cross-module](references/cross-thread-task.template.md).
-- Explicit independent review or interruption control:
-  [verification](references/verification-operating-model.template.md).
-- Cross-tool recovery: [handoff](references/handoff.template.md),
-  [runbook](references/runbook.template.md), [thread run](references/thread-run.template.md),
-  and [return packet](references/return-packet.template.md). Choose one adequate
-  surface, not all of them.
-- Broad concurrent doc cleanup: [compaction lock](references/compaction-lock.template.md).
-  Ordinary edits need no lock. Do not change code or project decisions as part
-  of doc cleanup; do not overwrite an active owner's work.
-- Other PRD, design, ADR, status, and roadmap templates in `references/` are
-  available only when the project has a real missing responsibility.
-- [Codex capability notes](references/codex-native-notes.md) explain the current
-  simplification; they are maintainer context, not routine startup reading.
-- [Chinese personal instructions](references/personal-instructions.zh-CN.md)
-  are an optional global preference example. Never install personal settings
-  merely because this project skill is being installed.
+Load only relevant detail: [dispatch](references/main-thread-dispatch-task.template.md),
+[cross-module dispatch](references/cross-thread-task.template.md),
+[extended notes](references/thread-operating-model.template.md), or
+[handoff](references/handoff.template.md). Independent
+[verification](references/verification-operating-model.template.md) and portable
+locks/packets remain opt-in for concrete needs. Other PRD, design, ADR, and runbook
+templates are not startup requirements.
+[Capability notes](references/codex-native-notes.md) are maintainer context.

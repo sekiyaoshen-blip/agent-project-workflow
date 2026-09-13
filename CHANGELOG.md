@@ -1,6 +1,20 @@
 # Changelog
 
-## Unreleased
+## 2026.09.14
+
+- Unified the complete Chinese global preferences with the skill and project rules.
+- Prefer Luna + xhigh for simple bounded work; respect actual model-selection tools.
+- Removed mandatory module hops for small work without active/exclusive conflicts.
+- Require one current-request result destination, actual callback, and sender-owned
+  end-to-end delivery; handle empty terminal results without duplicate execution.
+- Carry existing authority without invented restrictions; preserve real stop,
+  production-owner, payment, access, and tool-approval boundaries.
+- Reduced repeated waits/history reads and broadened the existing work snapshot
+  to single-task continuation, preserving decisions, evidence, and next steps.
+- Clarified one-off operations, proportional real-role validation, version notices,
+  factual usage reporting, and the source/local/project maintenance sequence.
+
+## Earlier Unreleased Changes
 
 - Added lightweight receiving rules for concurrent messages: preserve unfinished
   actions, separate notices from requests, resolve conflicting instructions, and

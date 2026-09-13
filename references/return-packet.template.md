@@ -9,7 +9,7 @@ Last updated: YYYY-MM-DD HH:MM
 
 - Task ID:
 - Source task/module:
-- Target reviewer: Main Task
+- Current-request return task ID / reviewer (not a historical Main/lead):
 - Related thread-run, if any:
 - Return reason: cross-tool | asynchronous | audit | native-delivery-unavailable | policy
 
@@ -47,7 +47,7 @@ Last updated: YYYY-MM-DD HH:MM
 - Safe to re-run: yes | no
 - Do not repeat:
 
-## Main Task Review
+## Responsible Lead Review
 
 - Review state: pending | accepted | needs-followup | failed | superseded
 - Reviewed at:

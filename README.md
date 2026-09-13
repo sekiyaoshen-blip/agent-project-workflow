@@ -10,8 +10,11 @@ Use it to initialize or simplify collaboration, not for every implementation.
 - A simple feature, page, or fix: implement in the existing stack, run relevant
   checks, deliver, and stop. No automatic architecture or audit workflow.
 - One task: a short `AGENTS.md` is enough.
-- Several stable modules: add an ownership registry and reuse long-lived visible
-  module tasks. Any task can route directly to the actual owner.
+- Simple bounded work prefers Luna + xhigh where supported; model selection is not
+  a reason to create another agent.
+- Stable modules: keep a responsibility map. Small work needs no mandatory hop
+  absent active conflict or explicit exclusive ownership; genuinely separate work
+  goes directly to its owner.
 - Cross-module work: one lead, non-overlapping slices, and only the shared
   interface decisions needed for the requested outcome.
 - Independent subagents: useful bounded work within the lead's scope, not
@@ -32,7 +35,10 @@ still apply. Optional controls remain available in `references/`.
 
 The [capability notes](references/codex-native-notes.md) explain the relevant
 March-September 2026 Codex updates and GPT-6 Astra prompting implications.
-This skill contains no model selection, provider routing, or fallback policy.
+Version 2026.09.14 adds a lightweight Luna preference, not provider routing.
+Dispatch preserves existing authority and one current-request return ID. Executors
+actually send results; senders wait and finish authorized delivery. Terminal empty
+results are recovered narrowly without rerunning the business task.
 
 ## Project Skeleton
 
@@ -41,7 +47,7 @@ The skeleton is a menu, not a copy-all bundle:
 ```text
 AGENTS.md                       project entrypoint
 docs/thread-registry.md         only for stable visible module tasks
-docs/current-work.md            only if a shared snapshot is missing
+docs/current-work.md            continuity when needed; reuse an existing equivalent
 ```
 
 Reuse existing project docs and work trackers. Extended operating notes,
@@ -51,8 +57,10 @@ Upgrading the skill does not silently migrate every existing project.
 ## Personal Preferences
 
 The [Chinese global preference example](references/personal-instructions.zh-CN.md)
-keeps language, concise delivery, proportional testing, Git boundaries, and
-existing commit/deploy workflows outside the project collaboration contract.
+unifies execution, collaboration, continuity, Git, and delivery rules with this
+skill. It also supplies Chinese-language and factual model/usage output preferences.
+One compact snapshot supports single-task continuation, even without a repository;
+stable responsibility does not require a permanently growing conversation.
 
 Installing the skill does not change personal settings. Apply that example to
 the supported global `AGENTS.md` only when the user requests it; merge existing

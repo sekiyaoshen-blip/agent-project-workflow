@@ -29,9 +29,9 @@ Do not initialize a project, create visible tasks, or change personal settings a
 ```text
 使用 $multi-agent-model 初始化或精简当前项目协作。
 保留项目专属规则、现有模块负责人和有用事实；复用已有文档与工作看板。
-简单任务直接实现、针对性验证、交付；不要自动添加架构、契约、哈希台账、门禁或验证旁路。
-只有稳定多模块协作才维护精简的任务归属表，误投任务直接转给实际负责人，跨模块工作只设一个牵头任务。
-优先使用原生任务消息、等待和结果读取。复用现有显性任务，缺少任务时先询问，不擅自创建。
+简单明确的任务优先 Luna+xhigh，在工具支持且符合用户选择时使用；直接实现、相关验证、交付，不自动添加架构、台账或验证旁路。
+只有稳定多模块协作才维护归属表；小范围工作无活动冲突或明确独占边界时不强制转派，确需协作时只设一个牵头任务。
+派单保留已有授权并写明本次唯一回传 ID，执行者实际回传，派单者等待并完成后续授权交付；复用原生能力，不擅自创建任务。
 这次只调整协作配置，不开始产品实现。最后简短报告实际改动和保留的必要限制。
 ```
 
@@ -41,7 +41,9 @@ English equivalent:
 Use $multi-agent-model to initialize or simplify this project's collaboration.
 Preserve project-specific requirements, existing owners, and useful facts. Reuse docs and work trackers.
 Keep simple work direct: implement, run relevant checks, deliver. Do not automatically add architecture, contracts, hash ledgers, gates, or verification lanes.
-Use a small registry only for stable module tasks. Route directly to owners; cross-module work has one lead.
+Prefer Luna + xhigh for simple bounded work where supported; do not create an agent just to switch models.
+Use a registry only for stable responsibilities; small work needs no forced hop absent conflict or exclusive ownership. Keep one lead.
+Carry existing authority and a current-request return ID; the executor sends a result and the sender waits through authorized delivery.
 Prefer native messages, waits, and result inspection. Reuse visible tasks; ask before creating missing ones.
 Only adjust collaboration configuration, not product implementation. Briefly report changes and necessary constraints.
 ```

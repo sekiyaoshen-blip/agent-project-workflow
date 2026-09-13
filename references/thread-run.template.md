@@ -10,6 +10,7 @@ Last updated: YYYY-MM-DD HH:MM
 - Task ID:
 - Source task/module:
 - Target task/module:
+- Current-request return task ID (not a historical Main/lead):
 - Native task ID/link:
 - State: pending | running | checkpointed | blocked | returned | closed
 - Portable-control reason:
@@ -21,7 +22,8 @@ Last updated: YYYY-MM-DD HH:MM
   - [ ] Criterion 1
   - [ ] Criterion 2
 - Relevant files/docs:
-- Constraints:
+- Existing authorization and actual constraints:
+- Key decisions and why:
 
 ## Latest Checkpoint
 
@@ -38,21 +40,22 @@ Last updated: YYYY-MM-DD HH:MM
 
 You are resuming `<task-id>` for `<module>`.
 
-Read `AGENTS.md`, this run record, the target module status/handoff, and only the
+Read `AGENTS.md`, this run record or the equivalent existing snapshot, and only the
 relevant current project docs. Inspect the current workspace before continuing.
 Confirm whether acceptance criteria are already satisfied. Continue from the
 latest checkpoint and do not repeat completed destructive steps.
 
-Return through native task delivery unless this record explicitly requires a
-Return Packet.
+Send the result once to this request's return task ID using native messaging.
+A final in the executor alone is not delivery. A Return Packet is only a fallback
+when native delivery is unavailable or explicitly inadequate.
 
 中文恢复提示词：
 
 你正在恢复 `<module>` 的 `<task-id>`。先读取 `AGENTS.md`、本运行记录、
-目标模块的 status/handoff，以及与任务直接相关的当前项目文档。继续前先
+与任务直接相关的当前项目文档；已有等价快照时不另读 status/handoff。继续前先
 检查当前工作区，并确认验收条件是否已经满足。从最新检查点继续，不要重复
-已经完成的破坏性步骤。除非本记录明确要求 Return Packet，否则通过原生任务
-能力返回结果。
+已经完成的破坏性步骤。通过原生消息向本次唯一回传任务 ID 实际发送一次结果，
+自己的 final 不算回传；原生交付不可用或明确不足时才使用 Return Packet。
 
 ## Result
 
@@ -64,6 +67,6 @@ Return Packet.
 
 ## Closure
 
-- Main task reviewed: yes | no
+- Current request's responsible lead reviewed: yes | no
 - Follow-up:
 - Archive/delete policy:

@@ -1,72 +1,49 @@
 # Extended Collaboration Notes
 
-Optional reference for projects with real cross-module coordination. The short
-`AGENTS.md` contract is sufficient for ordinary work. Do not create this file
-just to repeat that contract.
+Optional detail for actual cross-module coordination. The installed AGENTS.md
+is the runtime contract; do not create another file merely to repeat it.
 
-## Work Distribution
+## Distribution
 
-The main task handles project decisions and unresolved ownership, not every
-dispatch. Stable module tasks own implementation and local verification. A
-temporary subagent handles a bounded slice within its parent's authority.
+A registry identifies responsibility and useful context, not mandatory hops.
+Keep simple work local where no active conflict or explicit exclusive boundary
+exists. Delegate only genuinely separate work; one lead handles integration and
+shared decisions. Inspect active state only when overlap is plausible.
+Production and shared external resources retain their actual responsible owner.
 
-Use the relevant registry row and minimum impact scan to identify the owner.
-Route directly to that owner. If multiple modules are needed, one lead assigns
-non-overlapping slices and integrates the results. Resolve only blocking shared
-interface decisions before starting dependent work; keep independent work moving.
-
-A normal dispatch is a short message with outcome, scope, relevant context, and
-return destination. Existing task IDs/links provide identity. Add a request key
-or visited-task list only if multi-hop routing actually needs them to avoid
-duplicates. Never broadcast an unresolved request or bounce it among owners.
+Use the [dispatch prompt](main-thread-dispatch-task.template.md): carry existing
+authority and one current-request return ID. Do not invent prohibitions, expand
+authorization, or fall back to a historical Main ID. The executor actually sends
+its result; the sender waits and continues authorized delivery. Forwarded results
+do not need another acknowledgment chain.
 
 ## Native Coordination
 
-Use callable product tools rather than implementing another task runtime:
+Use native search/messages and cursor-based, grouped, bounded waits. A wait timeout
+or executor startup is not a stopping condition. Fetch detailed history for a
+specific missing fact, not every cycle. If terminal state has no result, inspect
+that task and only the relevant local turn if needed; ask once for the result,
+not another business run. Report an unrecoverable tool/quota failure.
 
-- Discover existing tasks, then inspect only the likely owner's recent context.
-- Check active state before a message that could conflict with current work.
-- Prefer bounded native waits with cursors for progress. Fetch detailed history
-  for a specific question, not on each polling cycle.
-- Review completed results before closing the intake request. If delivery fails,
-  inspect the source task; use one concise recovery message if needed.
-- Use native fork or worktree/host handoff for an actual context/location change.
-  Follow tool semantics, confirm the destination, and coordinate any interruption.
-- Use native goals or scheduled follow-ups only when the user requested them.
-  Do not add a heartbeat, status log, or monitoring loop to ordinary development.
-- If the runtime lacks a capability, use the smallest supported alternative.
-  Do not promise asynchronous return after the turn without a real delivery path.
+Subagents and visible tasks are distinct. Do not create a task just to use Luna
+or renew context. Supported compaction may keep the current task; a replacement
+visible task requires explicit user authorization. Do not build a scheduler or
+promise post-turn asynchronous delivery without a supported authorized mechanism.
 
-Subagents and user-visible long-lived tasks are different. Tool availability
-does not authorize creating a new visible task. Reuse stable owners; create
-missing visible tasks only when the user explicitly requests them.
+## Verification And Continuity
 
-## Verification And Attention
+Keep local checks with the implementer and proportional to changed behavior.
+A database/permission change needs evidence for the actual application role and
+affected path where feasible, not an unrelated full suite. Mark unverified
+boundaries. Independent review requires an explicit request, project rule, or
+concrete high-impact need; portable review templates are optional.
 
-Local testing is normal implementation work, not a separate workflow. Choose
-checks based on changed behavior and its dependents. A focused passing check
-does not need to run again solely because a commit is next.
+For continuation, use [one snapshot](current-work.template.md) or an equivalent
+existing surface. It works outside multi-agent projects too. Preserve decisions
+and their rationale, current evidence, authorization, and the next useful step.
+Do not require a second handoff or raw history copy. Update at meaningful progress
+or handoff, not every message; verify minimum current state before resuming.
 
-Independent verification is for an explicit request, existing project policy,
-or a specific high-impact change. When needed, use a clearly identified target
-and a bounded read-only reviewer. Do not interrupt a busy unrelated owner for
-routine pass results. Fixes stay with the implementation owner.
-
-Use the skill's verification templates only when independent evidence or
-interruption control is actually needed. Formal request IDs, Focus Leases, and
-file packets are not prerequisites for a normal review.
-
-## Durable Context
-
-Keep each fact in one existing home. Usage/interface/deployment changes may
-need a concise doc update; unchanged documentation needs no edit. A small
-implementation decision can remain beside its work item instead of spawning
-a PRD, technical design, and ADR.
-
-Add a handoff or runbook only when native history cannot preserve needed recovery
-context. Add a portable result file only when native delivery is inadequate.
-
-For bloated docs, remove duplicated generic rules and stale detail in the
-affected file. Preserve unique current facts, ownership, and explicit project
-requirements. Broad concurrent rewrites may need a shared-doc lock; normal
-targeted edits do not. Do not use doc cleanup to change code or product decisions.
+Doc cleanup preserves unique current facts, explicit stops, ownership, and project
+requirements. Ordinary edits do not need locks; coordinate only actual concurrent
+writes. Do not use cleanup to change product decisions or resume stopped work.
