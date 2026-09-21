@@ -2,7 +2,7 @@
 
 ## Claude Code
 
-Follow the Multi-Agent Model.
+Follow the Agent Project Workflow.
 
 Use this file only as the Claude-specific entry point. Do not duplicate the full operating model here; update `AGENTS.md` or `docs/thread-operating-model.md` instead.
 

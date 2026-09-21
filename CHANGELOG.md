@@ -2,6 +2,11 @@
 
 ## 2026.09.21
 
+- Rename the active skill, invocation, installed directory, and GitHub repository
+  to `agent-project-workflow` (previously `multi-agent-model` and repository
+  `multi-agent-project-playbook`). Preserve historical release records, existing
+  customizations, and explicit-only invocation.
+
 - Match the original Xuyi todo layout: conclusion, compact Done, overview cards,
   four-column module table, priority items, cross-module decisions, next steps,
   and evidence; preserve mobile readability and existing factual boundaries.

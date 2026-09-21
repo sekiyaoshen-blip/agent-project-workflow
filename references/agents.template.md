@@ -1,8 +1,8 @@
 # Project Agent Instructions
 
-Multi-Agent Model 2026.09.21. Use the user's language and repository conventions;
+Agent Project Workflow 2026.09.21. Use the user's language and repository conventions;
 read only relevant context. Preserve project-specific requirements. Load
-`$multi-agent-model` only to change the collaboration setup.
+`$agent-project-workflow` only to change the collaboration setup.
 
 ## Delivery
 

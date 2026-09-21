@@ -5,8 +5,9 @@
 ## 安装或升级 Skill
 
 ```text
-请从 https://github.com/sekiyaoshen-blip/multi-agent-project-playbook 安装或升级 $multi-agent-model。
+请从 https://github.com/sekiyaoshen-blip/agent-project-workflow 安装或升级 $agent-project-workflow。
 使用本机实际 skill 目录；Codex 优先 $CODEX_HOME/skills，否则使用 ~/.codex/skills。
+升级时原位迁移已有 skill 到 agent-project-workflow 目录，不保留重复的旧名安装。
 保留已有本地修改，检查 SKILL.md 和 agents/openai.yaml 的格式。
 不要因此初始化当前项目、创建显性任务或修改全局个性化设置。
 完成后报告安装位置和提交版本。
@@ -17,7 +18,7 @@
 安装后，在实际项目中使用：
 
 ```text
-使用 $multi-agent-model 初始化或精简当前项目协作。
+使用 $agent-project-workflow 初始化或精简当前项目协作。
 保留项目专属规则、现有模块负责人和有用事实；复用已有文档与工作看板。
 简单明确的任务优先 Luna+xhigh，在工具支持且符合用户选择时使用；直接实现、相关验证、交付，不自动添加架构、台账或验证旁路。
 只有稳定多模块协作才维护归属表；小范围工作无活动冲突或明确独占边界时不强制转派，确需协作时只设一个牵头任务。
@@ -43,7 +44,7 @@ AGENTS.md 是入口；登记表只用于稳定模块责任。需要续接或用�
 
 ## 手动安装
 
-将仓库放在本机 skill 根目录下的 `multi-agent-model/`，保留 SKILL.md、
+将仓库放在本机 skill 根目录下的 `agent-project-workflow/`，保留 SKILL.md、
 agents/ 和 references/。检查 YAML 格式即可，无需为纯文档安装搭建额外验收系统。
 
 `agents/openai.yaml` 保持显式调用：日常实现依赖项目规则，不重复加载本 skill。

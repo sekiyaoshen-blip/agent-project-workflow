@@ -1,4 +1,4 @@
-# Multi-Agent Model
+# Agent Project Workflow
 
 [中文说明](README.zh-CN.md) | [Installation](INSTALL.md)
 

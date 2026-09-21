@@ -7,8 +7,9 @@
 中文提示词：
 
 ```text
-请从 https://github.com/sekiyaoshen-blip/multi-agent-project-playbook 安装或升级 $multi-agent-model。
+请从 https://github.com/sekiyaoshen-blip/agent-project-workflow 安装或升级 $agent-project-workflow。
 使用本机实际 skill 目录；Codex 优先 $CODEX_HOME/skills，否则使用 ~/.codex/skills。
+升级时原位迁移已有 skill 到 agent-project-workflow 目录，不保留重复的旧名安装。
 保留已有本地修改，检查 SKILL.md 和 agents/openai.yaml 的格式。
 不要因此初始化当前项目、创建显性任务或修改全局个性化设置。
 完成后报告安装位置和提交版本。
@@ -17,8 +18,9 @@
 English equivalent:
 
 ```text
-Install or upgrade $multi-agent-model from https://github.com/sekiyaoshen-blip/multi-agent-project-playbook in the actual local skill directory.
+Install or upgrade $agent-project-workflow from https://github.com/sekiyaoshen-blip/agent-project-workflow in the actual local skill directory.
 For Codex, prefer $CODEX_HOME/skills, otherwise ~/.codex/skills. Preserve local edits and check SKILL.md and agents/openai.yaml formatting.
+For upgrades, move the existing installation to agent-project-workflow; do not leave duplicate old-name installations.
 Do not initialize a project, create visible tasks, or change personal settings as part of installation. Report the path and commit.
 ```
 
@@ -27,7 +29,7 @@ Do not initialize a project, create visible tasks, or change personal settings a
 中文提示词：
 
 ```text
-使用 $multi-agent-model 初始化或精简当前项目协作。
+使用 $agent-project-workflow 初始化或精简当前项目协作。
 保留项目专属规则、现有模块负责人和有用事实；复用已有文档与工作看板。
 简单明确的任务优先 Luna+xhigh，在工具支持且符合用户选择时使用；直接实现、相关验证、交付，不自动添加架构、台账或验证旁路。
 只有稳定多模块协作才维护归属表；小范围工作无活动冲突或明确独占边界时不强制转派，确需协作时只设一个牵头任务。
@@ -38,7 +40,7 @@ Do not initialize a project, create visible tasks, or change personal settings a
 English equivalent:
 
 ```text
-Use $multi-agent-model to initialize or simplify this project's collaboration.
+Use $agent-project-workflow to initialize or simplify this project's collaboration.
 Preserve project-specific requirements, existing owners, and useful facts. Reuse docs and work trackers.
 Keep simple work direct: implement, run relevant checks, deliver. Do not automatically add architecture, contracts, hash ledgers, gates, or verification lanes.
 Prefer Luna + xhigh for simple bounded work where supported; do not create an agent just to switch models.
@@ -61,7 +63,7 @@ do not edit private app state. Replace a separately configured old instruction
 block at its actual settings surface to avoid duplication. Existing running
 tasks may need a new task to load the updated instructions.
 
-For manual installation, place the repository under `multi-agent-model/` in
+For manual installation, place the repository under `agent-project-workflow/` in
 the skill root and retain SKILL.md, agents/, and references/. Validate YAML;
 no additional acceptance framework is needed for a documentation-only install.
 The existing explicit-only invocation policy remains unchanged.

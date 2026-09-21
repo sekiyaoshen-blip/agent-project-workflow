@@ -1,7 +1,7 @@
 interface:
-  display_name: "Multi-Agent Model"
+  display_name: "agent-project-workflow"
   short_description: "Deliver directly; coordinate only when needed"
-  default_prompt: "使用 $multi-agent-model 统一并精简当前项目规则，简单明确的任务优先 Luna+xhigh，仅在确有收益时协作，保留必要授权和项目专属要求。"
+  default_prompt: "使用 $agent-project-workflow 统一并精简当前项目规则，简单明确的任务优先 Luna+xhigh，仅在确有收益时协作，保留必要授权和项目专属要求。"
 
 policy:
   allow_implicit_invocation: false

@@ -1,12 +1,12 @@
 ---
-name: multi-agent-model
+name: agent-project-workflow
 description: >
   Initialize, simplify, audit, or upgrade goal-focused project collaboration.
   Use for explicit operating-model work, not routine implementation. Supports
   项目智能体协作, 长期模块任务, 会话统筹初始化, and collaboration-doc cleanup.
 ---
 
-# Multi-Agent Model
+# Agent Project Workflow
 
 Version 2026.09.21. Keep stable responsibility, not mandatory routing or an
 ever-growing execution conversation. Native tasks hold history; one existing

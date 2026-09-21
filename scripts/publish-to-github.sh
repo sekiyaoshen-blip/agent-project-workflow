@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_NAME="${1:-multi-agent-project-playbook}"
+REPO_NAME="${1:-agent-project-workflow}"
 OWNER="${GITHUB_OWNER:-sekiyaoshen-blip}"
-DESCRIPTION="Native-first multi-agent routing with durable context and non-preemptive verification."
+DESCRIPTION="Project-local agent workflow, module ownership, delivery, and compact current todos."
 
 if ! command -v gh >/dev/null 2>&1; then
   echo "GitHub CLI (gh) is required. Install it and authenticate with: gh auth login" >&2
@@ -16,7 +16,7 @@ fi
 
 git add .
 if ! git diff --cached --quiet; then
-  git commit -m "Initial open-source release of Multi-Agent Model"
+  git commit -m "Initial open-source release of Agent Project Workflow"
 fi
 
 if ! git remote get-url origin >/dev/null 2>&1; then
