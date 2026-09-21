@@ -2,50 +2,85 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>项目名称 | 当前状态与待办</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>项目名称 · 当前状态与待办</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#fff;color:#24282c;font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:0}
-main{max-width:1080px;margin:auto;padding:32px 28px 56px}h1{font-size:28px;line-height:1.3;margin:0 0 12px}h2{font-size:21px;margin:0 0 14px}h3{font-size:18px;margin:0 0 10px}p{margin:8px 0}a{color:#155c9c;text-underline-offset:3px}
-header{padding-bottom:22px;border-bottom:3px solid #286a60}section{padding:24px 0;border-bottom:1px solid #dce2e5}.meta,footer{color:#5c656d;font-size:14px}.focus{border-left:4px solid #b97918;padding:6px 16px;margin-top:20px;background:#fffaf0}
-.module{padding:20px 0;border-top:1px solid #e2e6e8}.module:first-of-type{border-top:0}.fields{display:grid;grid-template-columns:1fr 1.2fr;gap:12px 28px}.fields>div{min-width:0}
-.label{font-size:14px;font-weight:650;color:#46616c}ul,ol{padding-left:22px;margin:6px 0}li{margin:5px 0}footer{padding-top:18px}
-p,li,a,h1,h2,h3{overflow-wrap:anywhere}#done li{padding:3px 0}@media(max-width:640px){main{padding:24px 18px 40px}h1{font-size:25px}.fields{grid-template-columns:1fr;gap:8px}section{padding:20px 0}}
-@media print{main{max-width:none;padding:0;font-size:11pt}.module{break-inside:avoid}a{color:inherit}}
+:root{--ink:#1f2937;--muted:#667085;--line:#d9e1ec;--bg:#f5f7fb;--card:#fff;--blue:#175cd3;--green:#067647;--amber:#b54708;--red:#b42318}
+*{box-sizing:border-box}html{scroll-padding-top:16px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:0}
+main{max-width:1180px;margin:0 auto;padding:34px 22px 64px}h1{font-size:30px;line-height:1.25;margin:0 0 8px}h2{font-size:21px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}h3{font-size:17px;margin:0 0 8px}p{margin:8px 0}.meta,.muted{color:var(--muted)}.meta{margin:0 0 18px}.small{font-size:13px}
+.note{border-left:4px solid var(--blue);padding:10px 14px;background:#eef4ff}.conclusion{padding:20px 0 4px}.conclusion strong{color:var(--ink)}nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.card{min-width:0;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin:0;box-shadow:0 1px 2px #00000008}.stat{font-size:26px;line-height:1.4;font-weight:700}.label{font-size:13px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);table-layout:fixed}th,td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid var(--line);font-weight:400}thead th{background:#eef2f7;font-weight:600}tbody th{font-weight:600}tr:last-child>th,tr:last-child>td{border-bottom:0}.module-col{width:16%}.state-col{width:29%}.todo-col{width:32%}.decision-col{width:23%}.block{border-left:3px solid #e7bb78;padding-left:9px;color:var(--amber)}
+.tag{display:inline-block;border-radius:999px;padding:2px 8px;margin:2px 4px 2px 0;font-size:12px;font-weight:400}.can{background:#e8f5e9;color:var(--green)}.need{background:#fff4e5;color:var(--amber)}.wait{background:#eef4ff;color:var(--blue)}.stop{background:#fdecea;color:var(--red)}
+ul,ol{margin:6px 0 8px;padding-left:20px}li{margin:5px 0}code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:#edf0f5;padding:1px 4px;border-radius:4px}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+p,li,th,td,a,code,h1,h2,h3{overflow-wrap:anywhere}#done ul{padding-left:0;list-style:none}#done li{padding:8px 0;border-bottom:1px solid var(--line)}#done li:last-child{border-bottom:0}footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media(max-width:760px){main{padding:24px 16px 40px}h1{font-size:25px}h2{font-size:20px}.grid{grid-template-columns:1fr}.card{padding:16px}thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}table,tbody,tr,th,td{display:block;width:100%}table{border:0;background:transparent}tr{margin:0 0 16px;background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}tbody th,td{padding:12px 14px}tbody th{background:#eef2f7}td{border-bottom:0}td::before{content:attr(data-label);display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:5px}.tag{max-width:100%}}
+@media print{body{background:white}main{max-width:none;padding:0;font-size:10pt}nav{display:none}.card,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit}}
 </style>
 </head>
-<body>
-<main>
+<body><main>
 <header>
-<h1>项目名称 · 当前状态与待办</h1>
-<p>当前核心状态：待核对。尚未填写的模块不代表已完成。</p>
+<h1>项目名称｜当下 Todo List</h1>
 <p class="meta">事实核对：待填写 | 已知代码 / 证据基线：待填写（不回填本文件所在提交的 SHA）</p>
-<nav aria-label="本页目录"><a href="#modules">功能与模块</a> · <a href="#next">优先待办</a> · <a href="#done">Done</a> · <a href="#sources">依据</a></nav>
-<div class="focus"><strong>当前重点</strong><p>根据本次改动及现有依据，填写最重要的下一步。</p></div>
-</header>
-<section id="modules">
-<h2>功能与模块</h2>
-<article class="module" id="core">
-<h3>核心产品功能 / 模块名称</h3>
-<div class="fields">
-<div><p class="label">当前状态</p><p>待填写：已实现能力、实际验证范围与仍未完成的部分。</p><p class="label">阻塞 / 待决定</p><p>待填写；没有阻塞或待决定项时移除此字段。</p></div>
-<div><p class="label">待做事项</p><ul>
-  <li>待填写：具体下一步与可观察的完成条件。</li>
-</ul></div>
+<div class="note">“已有实现或记录”不等于“当前版本已完整验收”。具体证据、未验证范围和所需决定，分别保留在对应模块中。</div>
+<nav aria-label="本页目录"><a href="#done">已取得成果</a><a href="#common">共性待办</a><a href="#modules">模块 Todo</a><a href="#decisions">需要你介入</a><a href="#sources">依据与边界</a></nav>
+<div class="conclusion"><h3>当前结论</h3>
+<ul><li><strong>总体状态：</strong>当前核心状态：待核对。尚未填写的模块不代表已完成。</li><li><strong>首要待办：</strong>根据本次改动及现有依据，填写最重要的下一步。</li><li><strong>执行边界：</strong>已有授权与明确 STOP 继续有效；以下行动分类不构成恢复旧工作或新增授权。</li></ul>
 </div>
-
-</article>
+</header>
+<section id="done">
+<h2>一、已取得的成果 · Done</h2>
+<p class="muted small">保留简明成果与适用边界，不累计历次执行记录；每模块最多 3 条，全篇最多 10 条。</p>
+<p class="muted">暂无已核对的完成成果。</p>
 </section>
-<section id="next"><h2>优先待办</h2><ul>
+<section id="common">
+<h2>二、现在最重要的共性待办</h2>
+<div class="grid">
+<article class="card"><div class="stat">待核对</div><div class="label">产品功能 / 模块</div><p>按实际产品模块填写，不把示例数量作为项目事实。</p></article>
+<article class="card"><div class="stat">待核对</div><div class="label">优先推进方向</div><p>填写当前最重要的推进方向，不累计已结束工作。</p></article>
+<article class="card"><div class="stat">待闭合</div><div class="label">真实验证与决策</div><p>填写真实证据缺口与待决定边界；尚未核对不代表完成。</p></article>
+</div>
+<p><span class="tag can">可按既有授权推进</span>本地排查、相关验证、证据整理及清单维护。<span class="tag need">需要你介入</span>本人设备操作、未授权资金/权限或产品范围决定；已有授权不重复索取。</p>
+</section>
+<section id="modules">
+<h2>三、按模块的 Todo</h2>
+<p class="muted small">“我可以推进”只说明执行分工，仍受既有授权、职责和 STOP 约束；模块事实和待办以本表为主。</p>
+<table aria-label="各模块当前判断与待办">
+<thead><tr><th scope="col" class="module-col">模块</th><th scope="col" class="state-col">当前判断</th><th scope="col" class="todo-col">我可以推进</th><th scope="col" class="decision-col">需要你介入</th></tr></thead>
+<tbody>
+<tr id="core" data-module="core">
+<th scope="row"><strong>核心产品功能 / 模块名称</strong><br><span class="tag wait">待核对</span></th>
+<td data-label="当前判断"><p class="state">待填写：已实现能力、实际验证范围与仍未完成的部分。</p><p class="block"><strong>阻塞 / 待决定：</strong>待填写；没有阻塞或待决定项时移除此字段。</p></td>
+<td data-label="我可以推进" class="todos"><ul>
+  <li>待填写：具体下一步与可观察的完成条件。</li>
+</ul></td>
+<td data-label="需要你介入"><p>仅填写真正需要用户决定或本人操作的事项；没有则注明暂无。</p></td>
+</tr>
+</tbody></table>
+</section>
+<section id="execution">
+<h2>四、当前剩余执行项</h2>
+<div class="grid">
+<article class="card"><h3>当前优先执行项</h3><p>填写最重要的执行重点；详情链接到模块行，避免重复维护整份待办。</p><p><a href="#core">查看对应模块待办</a></p></article>
+</div>
+</section>
+<section id="decisions">
+<h2>五、跨模块事项与待决定项</h2>
+<table aria-label="跨模块决策分工">
+<thead><tr><th scope="col">事项</th><th scope="col">我可以直接做</th><th scope="col">需要你介入</th></tr></thead>
+<tbody>
+<tr><th scope="row">待填写：跨模块事项</th><td data-label="我可以直接做">填写可在既有授权内推进的准备工作。</td><td data-label="需要你介入">填写确需用户介入的范围、费用、权限或设备条件；没有则注明暂无。</td></tr>
+</tbody></table>
+</section>
+<section id="next"><h2>六、建议后续顺序</h2>
+<ol>
   <li>待填写：最多三个当前最重要的动作。</li>
-</ul></section>
-<section id="done"><h2>Done · 精简成果</h2>
-<ul>
-
-</ul>
+</ol>
 </section>
-<section id="sources"><h2>依据与边界</h2><p>这是当前产品快照，不替代已有任务权威和技术证据。实现、静态检查、模拟、实测、部署与验收分别说明；未核对的事实不得写成完成。</p><p><a href="../AGENTS.md">项目规则</a></p></section>
+<section id="sources"><h2>七、依据与边界</h2>
+<p class="small">这是当前产品快照，不替代已有任务权威和技术证据。实现、静态检查、模拟、实测、部署与验收分别说明；未核对的事实不得写成完成。</p>
+<p class="small"><a href="../AGENTS.md">项目规则</a></p>
+</section>
 <footer>固定入口：docs/current_todolist.html。按提交核对变化；保留当前事实，不追加执行流水。Done 每模块最多 3 条、全篇最多 10 条，历史细节见原有证据及 Git。</footer>
-</main>
-</body>
+</main></body>
 </html>

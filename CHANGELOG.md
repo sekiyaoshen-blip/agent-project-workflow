@@ -2,6 +2,10 @@
 
 ## 2026.09.21
 
+- Match the original Xuyi todo layout: conclusion, compact Done, overview cards,
+  four-column module table, priority items, cross-module decisions, next steps,
+  and evidence; preserve mobile readability and existing factual boundaries.
+
 - Add a canonical HTML product/module todo, maintained with each factual commit.
 - Bound Done summaries to 3 outcomes per module and 10 total; preserve open work
   and evidence limits without append-only history or duplicate status trackers.

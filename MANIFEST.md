@@ -4,7 +4,7 @@ Generated package contents. `MANIFEST.md`, local duplicate backups, `.DS_Store`,
 and Git metadata are excluded to avoid self-reference and machine-local files.
 
 - `.gitignore` — 69 bytes — sha256 `d4efada4bfb23875`
-- `CHANGELOG.md` — 6331 bytes — sha256 `f3c82ed47222fd39`
+- `CHANGELOG.md` — 6570 bytes — sha256 `eb63799814b4aae1`
 - `CONTRIBUTING.md` — 1980 bytes — sha256 `92636b82658bf644`
 - `INSTALL.md` — 4666 bytes — sha256 `699e537b0d495b28`
 - `INSTALL.zh-CN.md` — 4011 bytes — sha256 `df5678d52c882fc4`
@@ -13,12 +13,12 @@ and Git metadata are excluded to avoid self-reference and machine-local files.
 - `README.zh-CN.md` — 3992 bytes — sha256 `cb2ff47a164f9613`
 - `SKILL.md` — 7063 bytes — sha256 `2c3cb620ebce973a`
 - `agents/openai.yaml` — 356 bytes — sha256 `993e294726097d77`
-- `project-skeleton/AGENTS.md` — 9182 bytes — sha256 `12b97a7fd8ba9eaf`
+- `project-skeleton/AGENTS.md` — 9666 bytes — sha256 `bd2a7493b7ed4aa1`
 - `project-skeleton/docs/current-work.md` — 1379 bytes — sha256 `b14dde1dda4d446c`
-- `project-skeleton/docs/current_todolist.html` — 3317 bytes — sha256 `6e0e0e10078dabf7`
+- `project-skeleton/docs/current_todolist.html` — 8617 bytes — sha256 `ada0987643c5426d`
 - `project-skeleton/docs/thread-registry.md` — 1332 bytes — sha256 `264a39bbfa949ba1`
 - `references/adr.template.md` — 413 bytes — sha256 `1a0b003361eebd3c`
-- `references/agents.template.md` — 9182 bytes — sha256 `12b97a7fd8ba9eaf`
+- `references/agents.template.md` — 9666 bytes — sha256 `bd2a7493b7ed4aa1`
 - `references/claude.template.md` — 1153 bytes — sha256 `f43f9a10ff70715d`
 - `references/codex-native-notes.md` — 2747 bytes — sha256 `6493a822b1f823ad`
 - `references/compaction-lock.template.md` — 1416 bytes — sha256 `ceb6cecaa6f0ef54`
@@ -26,7 +26,7 @@ and Git metadata are excluded to avoid self-reference and machine-local files.
 - `references/cross-thread-task.template.md` — 933 bytes — sha256 `079824778dffb032`
 - `references/current-prd.template.md` — 1744 bytes — sha256 `7263b66ec960a7df`
 - `references/current-technical-design.template.md` — 1907 bytes — sha256 `001398f99d4a288b`
-- `references/current-todolist.template.html` — 3317 bytes — sha256 `6e0e0e10078dabf7`
+- `references/current-todolist.template.html` — 8617 bytes — sha256 `ada0987643c5426d`
 - `references/current-work.template.md` — 1379 bytes — sha256 `b14dde1dda4d446c`
 - `references/focus-lease.template.md` — 1547 bytes — sha256 `4d37783da24c343e`
 - `references/global-status.template.md` — 1168 bytes — sha256 `0ac4dcd6e1933955`

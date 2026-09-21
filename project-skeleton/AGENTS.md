@@ -85,6 +85,13 @@ validation distinct from implementation, simulation, deployment, and acceptance.
 Existing task trackers and technical evidence remain authoritative; this is their
 readable current snapshot, not a replacement or a second history.
 
+Use the HTML template's original-Xuyi layout: conclusion; compact Done; overview
+cards; module table (module, current judgment, agent actions, user involvement);
+priority items; cross-module decisions; next-step order; evidence and limits.
+Use a light gray background, restrained status tags, and a readable narrow-screen
+layout. Keep module facts in the table; other sections summarize or link, not copy
+full todo lists. Action columns classify responsibility, not grant authority.
+
 Before every commit, reconcile the modules affected by the staged changes and
 available verification. Update changed facts in this file in the same commit;
 review with no factual change needs no timestamp-only edit or empty commit.
