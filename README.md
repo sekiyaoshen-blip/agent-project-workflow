@@ -9,7 +9,7 @@ Use it to initialize or simplify collaboration, not for every implementation.
 
 - A simple feature, page, or fix: implement in the existing stack, run relevant
   checks, deliver, and stop. No automatic architecture or audit workflow.
-- One task: a short `AGENTS.md` is enough.
+- One task: short `AGENTS.md` rules and the current product todo are enough.
 - Simple bounded work prefers Luna + xhigh where supported; model selection is not
   a reason to create another agent.
 - Stable modules: keep a responsibility map. Small work needs no mandatory hop
@@ -46,6 +46,7 @@ The skeleton is a menu, not a copy-all bundle:
 
 ```text
 AGENTS.md                       project entrypoint
+docs/current_todolist.html      current product/module state; maintained per commit
 docs/thread-registry.md         only for stable visible module tasks
 docs/current-work.md            continuity when needed; reuse an existing equivalent
 ```
@@ -70,3 +71,11 @@ blocks in multiple settings surfaces.
 ## License
 
 [MIT](LICENSE).
+
+## Current Product Todo
+
+Maintain `docs/current_todolist.html` as the compact feature/module snapshot.
+Every agent commit checks affected modules and includes factual updates in the same
+commit; unchanged facts need no empty edit. Done is capped at 3 outcomes per module
+and 10 total. This is an agent workflow, not a Git hook or scheduled updater.
+Migrate existing todos and repair links; technical handoff remains optional.

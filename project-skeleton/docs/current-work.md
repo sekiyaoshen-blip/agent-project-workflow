@@ -19,3 +19,6 @@ message. On continuation, read this first and verify minimum live state.
 Keep useful decisions and evidence; replace superseded detail rather than append
 history. This does not guarantee recovery after an abrupt crash or authorize new
 tasks, deployments, or previously stopped work.
+
+In projects, product/module status and todos live in `docs/current_todolist.html`.
+Link there; keep this optional surface only for missing technical handoff context.

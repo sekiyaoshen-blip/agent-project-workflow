@@ -50,8 +50,8 @@ Only adjust collaboration configuration, not product implementation. Briefly rep
 
 ## Scope
 
-The skeleton is a menu: AGENTS.md is the entrypoint; the registry and work
-snapshot are conditional. Do not copy all references. An upgrade must not
+The skeleton is a menu: AGENTS.md is the entrypoint; the current product todo is maintained per commit; the registry and technical
+handoff snapshot are conditional. Do not copy all references. An upgrade must not
 silently remove project-specific release requirements or migrate other projects.
 
 The [Chinese personal preference example](references/personal-instructions.zh-CN.md)
@@ -72,3 +72,11 @@ After an authorized skill change, publish the validated source to GitHub, sync
 the local skill, then update adopted local project rules within the established
 scope. Follow [the update sequence](CONTRIBUTING.md#update-sequence), preserving
 customizations and frozen snapshots. Standalone installation remains separate.
+
+## Current Product Todo
+
+Maintain `docs/current_todolist.html` as the compact feature/module snapshot.
+Every agent commit checks affected modules and includes factual updates in the same
+commit; unchanged facts need no empty edit. Done is capped at 3 outcomes per module
+and 10 total. This is an agent workflow, not a Git hook or scheduled updater.
+Migrate existing todos and repair links; technical handoff remains optional.

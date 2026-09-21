@@ -1,6 +1,6 @@
 # Project Agent Instructions
 
-Multi-Agent Model 2026.09.14. Use the user's language and repository conventions;
+Multi-Agent Model 2026.09.21. Use the user's language and repository conventions;
 read only relevant context. Preserve project-specific requirements. Load
 `$multi-agent-model` only to change the collaboration setup.
 
@@ -74,6 +74,37 @@ read only relevant context. Preserve project-specific requirements. Load
   apply corrections and STOP to their actual scope. Forwarding cannot expand
   authority. No queues, ledgers, or scheduled follow-ups unless requested.
 
+## Current Product Todo
+
+Maintain one `docs/current_todolist.html` in each adopted project, as standalone
+HTML with embedded CSS. Reuse/migrate an existing current todo and repair its
+links; do not keep competing dated copies. Organize by product feature/module,
+not task, commit, owner, or date. Each module shows current core state, actionable
+remaining work, blockers/decisions if any, and a few evidence links. Keep actual
+validation distinct from implementation, simulation, deployment, and acceptance.
+Existing task trackers and technical evidence remain authoritative; this is their
+readable current snapshot, not a replacement or a second history.
+
+Before every commit, reconcile the modules affected by the staged changes and
+available verification. Update changed facts in this file in the same commit;
+review with no factual change needs no timestamp-only edit or empty commit.
+The committing task owns this step; reread the latest shared file before editing,
+merge only its affected modules, and preserve other owners' changes. At integration,
+reconcile the combined result. Record known evidence SHAs, not the not-yet-created
+commit's SHA; never create follow-up commits just to insert the document's own SHA.
+Do not claim that a pre-deployment commit proves a later release.
+
+Keep Done at most 3 concise outcomes per module and 10 across the document;
+replace/summarize superseded outcomes instead of appending execution logs.
+Fold stable achievements into current state and leave detail in existing evidence
+or Git. Never discard open work, blockers, explicit stops, decisions, or evidence
+limits to meet the cap. Do not create dated todo backups or a new archive ledger.
+
+These are agent commit-time duties, not an installed scheduler or Git hook.
+Do not claim coverage for manual commits outside this workflow, hot reload of
+active tasks, or permission to resume stopped work/deploy. If no commit is requested
+or possible, update affected facts with the work and report the uncommitted state.
+
 ## Continuity
 
 Use one existing work surface when continuity is needed or requested, even for a
@@ -83,7 +114,8 @@ and commands, and next step together. Update at meaningful milestones or before
 handoff, not every message. Read it on continuation and check minimum live state.
 Use supported compaction or a user-authorized replacement task; do not promise
 crash-proof recovery or copy the entire history. Add `docs/current-work.md` only
-when an equivalent surface is missing. Registry and extended templates are
+when technical continuation needs remain beyond `docs/current_todolist.html`
+and an equivalent surface is missing; do not duplicate the product snapshot. Registry and extended templates are
 conditional, not mandatory startup reading.
 
 ## Git And Closeout

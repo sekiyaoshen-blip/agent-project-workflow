@@ -8,7 +8,7 @@ description: >
 
 # Multi-Agent Model
 
-Version 2026.09.14. Keep stable responsibility, not mandatory routing or an
+Version 2026.09.21. Keep stable responsibility, not mandatory routing or an
 ever-growing execution conversation. Native tasks hold history; one existing
 work surface holds the current facts needed to continue.
 
@@ -43,9 +43,13 @@ more investigation or tests; a passed check alone does not.
    module responsibilities. It is not a blanket write ban or dispatch queue.
    Small work may stay with the current responsible task across modules when no
    active conflict or explicit exclusive boundary exists.
-4. Use [one current-work snapshot](references/current-work.template.md) when
-   continuity is needed or requested, even for one task outside a repository.
-   Reuse an equivalent existing surface. Do not add a documentation suite.
+4. Maintain `docs/current_todolist.html` using the
+   [product todo template](references/current-todolist.template.html). Migrate an
+   existing todo and repair links, rather than add a duplicate. Apply the runtime
+   rules' per-commit reconciliation and bounded Done section. For technical
+   continuity not covered there, reuse an existing surface or the optional
+   [current-work snapshot](references/current-work.template.md), including outside
+   a repository. Do not copy product status into a second tracker.
 5. Discover and reuse visible tasks when delegation is worthwhile. Create or
    replace a visible task only on explicit user request and with runtime support.
    Use [the startup prompt](references/module-startup-prompt.template.md).

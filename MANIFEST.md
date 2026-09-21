@@ -4,20 +4,21 @@ Generated package contents. `MANIFEST.md`, local duplicate backups, `.DS_Store`,
 and Git metadata are excluded to avoid self-reference and machine-local files.
 
 - `.gitignore` — 69 bytes — sha256 `d4efada4bfb23875`
-- `CHANGELOG.md` — 5909 bytes — sha256 `de9755cf816044d7`
+- `CHANGELOG.md` — 6331 bytes — sha256 `f3c82ed47222fd39`
 - `CONTRIBUTING.md` — 1980 bytes — sha256 `92636b82658bf644`
-- `INSTALL.md` — 4175 bytes — sha256 `68f939a384bc2863`
-- `INSTALL.zh-CN.md` — 3421 bytes — sha256 `9f159a99de278a79`
+- `INSTALL.md` — 4666 bytes — sha256 `699e537b0d495b28`
+- `INSTALL.zh-CN.md` — 4011 bytes — sha256 `df5678d52c882fc4`
 - `LICENSE` — 1087 bytes — sha256 `0b0599b3bfd40e56`
-- `README.md` — 3423 bytes — sha256 `7e12691a3455673e`
-- `README.zh-CN.md` — 3296 bytes — sha256 `d0df3ef072280386`
-- `SKILL.md` — 6777 bytes — sha256 `5f3ce1877f1ba85b`
+- `README.md` — 3968 bytes — sha256 `59430781386bf82d`
+- `README.zh-CN.md` — 3992 bytes — sha256 `cb2ff47a164f9613`
+- `SKILL.md` — 7063 bytes — sha256 `2c3cb620ebce973a`
 - `agents/openai.yaml` — 356 bytes — sha256 `993e294726097d77`
-- `project-skeleton/AGENTS.md` — 7056 bytes — sha256 `7bc87b3ccc471508`
-- `project-skeleton/docs/current-work.md` — 1212 bytes — sha256 `5fefb6ff728a93eb`
+- `project-skeleton/AGENTS.md` — 9182 bytes — sha256 `12b97a7fd8ba9eaf`
+- `project-skeleton/docs/current-work.md` — 1379 bytes — sha256 `b14dde1dda4d446c`
+- `project-skeleton/docs/current_todolist.html` — 3317 bytes — sha256 `6e0e0e10078dabf7`
 - `project-skeleton/docs/thread-registry.md` — 1332 bytes — sha256 `264a39bbfa949ba1`
 - `references/adr.template.md` — 413 bytes — sha256 `1a0b003361eebd3c`
-- `references/agents.template.md` — 7056 bytes — sha256 `7bc87b3ccc471508`
+- `references/agents.template.md` — 9182 bytes — sha256 `12b97a7fd8ba9eaf`
 - `references/claude.template.md` — 1153 bytes — sha256 `f43f9a10ff70715d`
 - `references/codex-native-notes.md` — 2747 bytes — sha256 `6493a822b1f823ad`
 - `references/compaction-lock.template.md` — 1416 bytes — sha256 `ceb6cecaa6f0ef54`
@@ -25,7 +26,8 @@ and Git metadata are excluded to avoid self-reference and machine-local files.
 - `references/cross-thread-task.template.md` — 933 bytes — sha256 `079824778dffb032`
 - `references/current-prd.template.md` — 1744 bytes — sha256 `7263b66ec960a7df`
 - `references/current-technical-design.template.md` — 1907 bytes — sha256 `001398f99d4a288b`
-- `references/current-work.template.md` — 1212 bytes — sha256 `5fefb6ff728a93eb`
+- `references/current-todolist.template.html` — 3317 bytes — sha256 `6e0e0e10078dabf7`
+- `references/current-work.template.md` — 1379 bytes — sha256 `b14dde1dda4d446c`
 - `references/focus-lease.template.md` — 1547 bytes — sha256 `4d37783da24c343e`
 - `references/global-status.template.md` — 1168 bytes — sha256 `0ac4dcd6e1933955`
 - `references/handoff.template.md` — 855 bytes — sha256 `c415bdcb0ea25cf6`
@@ -33,7 +35,7 @@ and Git metadata are excluded to avoid self-reference and machine-local files.
 - `references/module-boundary-map.template.md` — 781 bytes — sha256 `8709982bed766b59`
 - `references/module-current-prd.template.md` — 1041 bytes — sha256 `e28d6fbfbef71d3b`
 - `references/module-current-technical-design.template.md` — 1166 bytes — sha256 `1f326facfe012d9a`
-- `references/module-startup-prompt.template.md` — 1870 bytes — sha256 `436f9f323d0bc969`
+- `references/module-startup-prompt.template.md` — 2347 bytes — sha256 `2d02b085d37d1408`
 - `references/module-status.template.md` — 1038 bytes — sha256 `ff5a26dc92c66731`
 - `references/personal-instructions.zh-CN.md` — 7824 bytes — sha256 `03815834d68a0d4f`
 - `references/project-brief.template.md` — 727 bytes — sha256 `0466c1664235c081`

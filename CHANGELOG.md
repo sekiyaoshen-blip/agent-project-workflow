@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026.09.21
+
+- Add a canonical HTML product/module todo, maintained with each factual commit.
+- Bound Done summaries to 3 outcomes per module and 10 total; preserve open work
+  and evidence limits without append-only history or duplicate status trackers.
+- Add matching template/skeleton and commit-time ownership instructions. This does
+  not install a scheduler or Git hook, or change explicit-only skill invocation.
+
 ## 2026.09.14
 
 - Unified the complete Chinese global preferences with the skill and project rules.
